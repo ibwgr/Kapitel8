@@ -8,6 +8,7 @@ public class start {
         Student studi = new Student();
         studi.setName("Susi Sorglos");
         studi.setNummer(1234);
+        //sdgsd
 
         System.out.print(studi);
 
