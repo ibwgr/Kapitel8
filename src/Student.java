@@ -21,11 +21,11 @@ public class Student {
         return nummer ;
     }
 
-    public void setNummer(int nummer) {
+    public void setNummer(int n) {
         int altenummer = nummer;
-        if (!validateNummer())
+        if (!validateNummer(n))
             nummer = altenummer;
-        this.nummer = nummer;
+
     }
 
     public boolean validateNummer() {
