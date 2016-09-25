@@ -3,16 +3,17 @@
  */
 public class start {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
-        Student studi = new Student();
+        Student studi = Student.createStudent();
+        System.out.println(Student.getZaehler()+" Studenten sind auf der Uni");
         studi.setName("Susi Sorglos");
-        studi.setNummer(12341);
-        //sdgsd
+        studi.setNummer(15843);
+        studi.setFach(5);
+
+
 
         System.out.print(studi);
-
-
     }
 
 }
