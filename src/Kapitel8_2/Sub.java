@@ -11,7 +11,7 @@ public class Sub extends Super {
         System.out.println("Sub-Konstruktor gestartet");
         System.out.println(" x = " + x);
         System.out.println(" y = " + y);
-        x = "nach Sub-Konstruktor";
+        x = "nach SSub-Konstruktor";
         y = "nach Sub-Konstruktor";
         System.out.println("Sub-Konstruktor beendet");
         System.out.println(" x = " + x);
