@@ -3,34 +3,39 @@
  */
 public class Student {
 
-    public Student(){
-        this  (1970);
+    public Student() {
+        this(1970);
     }
 
-    public Student(int geburtsjahr){
+    public Student(int geburtsjahr) {
         zaehler++;
         this.geburtsjahr = geburtsjahr;
     }
 
+    public Student(String name, int nummer, int fach, int geburtsjahr) {
+        this(geburtsjahr);
+        this.name = name;
+        this.nummer = nummer;
+        this.fach = fach;
+    }
+
+    public Student(String name, int nummer, int fach, int geburtsjahr, boolean geschlecht) {
+        this(name, nummer, fach, geburtsjahr);
+        this.geschlecht = geschlecht;
+    }
+
     private static final int MATEHEMATIKSTUDIUM = 1;
-
     private static final int INFORMATIKSTUDIUM = 2;
-
     private static final int ARCHITEKTURSTUDIUM = 3;
-
     private static final int WIRTSCHAFTLICHESSTUDIUM = 4;
-
     private static final int BIOLOGIESTUDIUM = 5;
-
     private static final int GESCHICHTSSTUDIUM = 6;
-
     private static final int GERMANISTIGSTUDIUM = 7;
-
     private static final int POLITOLOGIESTUDIUM = 8;
-
     private static final int PHYSIKSTUDIUM = 9;
-
     public static final Student PHANTOM;
+    public static final boolean MAENDLICH = true;
+    public static final boolean WEIBLICH = false;
 
     private static int zaehler = 0;
 
@@ -38,6 +43,7 @@ public class Student {
     private int nummer = 22636;
     private int fach;
     private int geburtsjahr;
+    private boolean geschlecht;
 
 
     public String getName() {
@@ -45,7 +51,7 @@ public class Student {
     }
 
     public void setName(String name) {
-        this.name =  name;  //"namenlos";
+        this.name = name;  //"namenlos";
     }
 
     public int getNummer() {
@@ -80,7 +86,7 @@ public class Student {
     public String toString() {
         String res = name + " (MatNr. " + nummer + "  ) " + "Geburtsjahr:" + getGeburtsjahr();
 
-        switch (fach){
+        switch (fach) {
 
             case MATEHEMATIKSTUDIUM:
                 return res + "(ein Mathe Student)";
@@ -89,7 +95,7 @@ public class Student {
                 return res + " (ein Informatik Student)";
 
             case ARCHITEKTURSTUDIUM:
-                return res +"(a Häuse bauer)";
+                return res + "(a Häuse bauer)";
 
             case WIRTSCHAFTLICHESSTUDIUM:
                 return res + " (Ein Wirtschaftwissenschaftler)";
@@ -110,24 +116,24 @@ public class Student {
                 return res + " (Produziert in Cern mal ein schwarzes Loch)";
 
             default:
-               return res + " (Kein Ahnung was der Student macht)";
+                return res + " (Kein Ahnung was der Student macht)";
         }
     }
-
 
 
     public static int getZaehler() {
         return zaehler;
     }
 
-    public static Student createStudent(){
-        zaehler++;
+    public static Student createStudent() {
+        //zaehler++;
         return new Student(1982);
     }
+
     static {
-        PHANTOM = new Student(1973);
+        PHANTOM = new Student(1473);
         PHANTOM.name = "Erik le phant";
-        PHANTOM.nummer = -12345;
+        PHANTOM.nummer = -12346;
         zaehler = 0;
 
     }

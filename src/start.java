@@ -4,6 +4,9 @@
 public class start {
 
     public static void main(String[] args) {
+        Student student;
+
+        student = new Student( "Hans Wiwi", 848600, 5, 1976 );
 
         Student studi = Student.createStudent();
         System.out.println(Student.getZaehler()+" Studenten sind auf der Uni");
@@ -11,9 +14,12 @@ public class start {
         studi.setNummer(15843);
         studi.setFach(5);
 
+        System.out.println(Student.PHANTOM);
 
 
-        System.out.print(studi);
+
+
+        System.out.print(studi.toString());
     }
 
 }
